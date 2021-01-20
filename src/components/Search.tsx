@@ -40,7 +40,7 @@ export const Search = ({handleUpdateStock, stocks}: ISearchProps) => {
     }
 
     return (
-        <div>
+        <div data-testid="search-test">
             <input name="search" onChange={(e) => handleSearchChange(_.get(e, ['target', 'value']))}/>
             {!_.isEmpty(results)&& !_.isUndefined(results) && <div>
                 <select onChange={(e) => handleSelectResult(_.get(e, ['target', 'value']))}>

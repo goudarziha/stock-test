@@ -20,7 +20,7 @@ function App() {
   }
   
   return (
-    <div className="App" style={{padding: 10}}>
+    <div className="App" style={{padding: 10}} data-testid="app-test">
 
       <div style={{display:'flex', flexDirection: 'column', marginTop: 20, marginBottom: 20}}>
         <h2>Stock Comparison</h2>
