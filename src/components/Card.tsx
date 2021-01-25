@@ -26,7 +26,8 @@ export const Card = ({ stock, handleRemoveStock, testId }: ICardProps) => {
 
 	React.useEffect(() => {
 		if (!_.isEmpty(stock) && !_.isUndefined(stock)) {
-			// call is throttled
+			// call is throttled because of free tier use / cant use this to get stock name
+			//
 			// getStockFundamentals(stock).then(res=> {
 			//     console.log(res)
 			//     setName(_.get(res, ['data', 'name']))

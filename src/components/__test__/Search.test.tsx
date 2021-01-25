@@ -18,7 +18,7 @@ describe("search tests", () => {
 	const div = document.createElement("div");
 	let searchEl;
 
-	const handleInputChange = (evt: any) => {};
+	const handleInputChange = jest.fn();
 
 	const setup = () => {
 		const utils = render(
@@ -32,7 +32,9 @@ describe("search tests", () => {
 	};
 
 	beforeAll(() => {
-		searchEl = render(<Search handleUpdateStock={jest.fn()} stocks={[]} />);
+		searchEl = render(
+			<Search handleUpdateStock={() => handleInputChange} stocks={[]} />
+		);
 	});
 
 	test("initialize", async () => {
