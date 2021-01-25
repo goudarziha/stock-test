@@ -1,9 +1,9 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import React from "react";
+import { render, screen } from "@testing-library/react";
+import App from "./App";
 
-test('renders learn react link', () => {
-  render(<App />);
-  const appEl = screen.findByTestId('app-test')
-  expect(appEl).toBeDefined()
+test("renders learn react link", () => {
+	render(<App />);
+	const appEl = screen.findByTestId("app-test");
+	expect(appEl).toBeDefined();
 });
